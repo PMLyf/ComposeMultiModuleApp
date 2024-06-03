@@ -104,5 +104,8 @@ dependencies {
 //        implementation("androidx.compose.runtime:runtime-rxjava2")
 //        implementation(libs.runtimeRxjava2)
 
+
+            // DAGGER HILT
+        implementation(libs.daggerHilt)
     }
 }
