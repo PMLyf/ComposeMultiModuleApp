@@ -37,13 +37,13 @@ material-icons-extended = { group =  "androidx.compose.material", name = "materi
 #material3-window-size-class = { group = "androidx.compose.material3", name = "material3-window-size-class" }
 
 ## Optional - Integration with activities
-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+activityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 ## Optional - Integration with ViewModels
-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle-viewmodel-compose" }
+lifecycleViewmodelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle-viewmodel-compose" }
 ## Optional - Integration with LiveData
-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata" }
+runtimeLivedata = { group = "androidx.compose.runtime", name = "runtime-livedata" }
 ## Optional - Integration with RxJava
-runtime-rxjava2 = { group = "androidx.compose.runtime", name = "runtime-rxjava2" }
+runtimeRxjava2 = { group = "androidx.compose.runtime", name = "runtime-rxjava2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

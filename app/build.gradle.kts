@@ -83,20 +83,26 @@ dependencies {
         // Optional - Included automatically by material, only add when you need
         // the icons but not the material library (e.g. when using Material3 or a
         // custom design system based on Foundation)
-        implementation("androidx.compose.material:material-icons-core")
+//        implementation("androidx.compose.material:material-icons-core")
         // Optional - Add full set of material icons
-        implementation("androidx.compose.material:material-icons-extended")
+//        implementation("androidx.compose.material:material-icons-extended")
         // Optional - Add window size utils
-        implementation("androidx.compose.material3:material3-window-size-class")
-
+//        implementation("androidx.compose.material3:material3-window-size-class")
         // Optional - Integration with activities
-        implementation("androidx.activity:activity-compose:1.9.0")
+//        implementation("androidx.activity:activity-compose:1.9.0")
+//        implementation(libs.activity-compose)
+        implementation(libs.activityCompose)
         // Optional - Integration with ViewModels
-        implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+        implementation(libs.lifecycleViewmodelCompose)
         // Optional - Integration with LiveData
-        implementation("androidx.compose.runtime:runtime-livedata")
+        implementation(libs.runtimeLivedata)
         // Optional - Integration with RxJava
-        implementation("androidx.compose.runtime:runtime-rxjava2")
+//        implementation("androidx.compose.runtime:runtime-livedata")
+        implementation(libs.runtimeRxjava2)
+
+        // Optional - Integration with RxJava
+//        implementation("androidx.compose.runtime:runtime-rxjava2")
+//        implementation(libs.runtimeRxjava2)
 
     }
 }
