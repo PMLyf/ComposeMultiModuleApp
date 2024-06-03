@@ -59,22 +59,26 @@ dependencies {
 
         // Choose one of the following:
         // Material Design 3
-        implementation("androidx.compose.material3:material3")
+        implementation(libs.material3)
         // or Material Design 2
-        implementation("androidx.compose.material:material")
+//        implementation("androidx.compose.material:material")
+        implementation(libs.material)
         // or skip Material Design and build directly on top of foundational components
-        implementation("androidx.compose.foundation:foundation")
+//        implementation("androidx.compose.foundation:foundation")
         // or only import the main APIs for the underlying toolkit systems,
         // such as input and measurement/layout
-        implementation("androidx.compose.ui:ui")
+//        implementation("androidx.compose.ui:ui")
 
         // Android Studio Preview support
-        implementation("androidx.compose.ui:ui-tooling-preview")
-        debugImplementation("androidx.compose.ui:ui-tooling")
-
+        implementation(libs.androidStudioPreviewSupport)
+//        implementation("androidx.compose.ui:ui-tooling-preview")
+//        debugImplementation("androidx.compose.ui:ui-tooling")
+        debugImplementation(libs.debugImplementation)
         // UI Tests
-        androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-        debugImplementation("androidx.compose.ui:ui-test-manifest")
+//        androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+        androidTestImplementation(libs.composeUI)
+//        debugImplementation("androidx.compose.ui:ui-test-manifest")
+        debugImplementation(libs.composeTestJunit)
 
         // Optional - Included automatically by material, only add when you need
         // the icons but not the material library (e.g. when using Material3 or a

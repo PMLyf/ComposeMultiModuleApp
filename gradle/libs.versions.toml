@@ -23,7 +23,7 @@ composeUI = { group = "androidx.compose.ui", name = "ui" }
 androidStudioPreviewSupport = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidStudioPreviewSupportDebug = { group = "androidx.compose.ui", name = "ui-tooling" }
 # UI TEST
-androidTestImplementation = { group ="androidx.compose.ui" , name = "ui-test-junit4" }
+composeTestJunit = { group ="androidx.compose.ui" , name = "ui-test-junit4" }
 debugImplementation = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 
 
