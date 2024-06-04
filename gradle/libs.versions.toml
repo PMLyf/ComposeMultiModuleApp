@@ -1,9 +1,10 @@
 [versions]
 agp = "8.4.1"
 kotlin = "1.9.10"
+kspVersion = "2.0.0-1.0.21"
 coreKtx = "1.13.1"
 # Dagger Hilt
-daggerVersion = " 2.40"
+daggerVersion = " 2.44"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -28,7 +29,8 @@ androidStudioPreviewSupportDebug = { group = "androidx.compose.ui", name = "ui-t
 composeTestJunit = { group ="androidx.compose.ui" , name = "ui-test-junit4" }
 debugImplementation = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 # Dagger / Hilt
-daggerHilt  = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "daggerVersion"}
+hiltAndroid  = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerVersion"}
+hiltAndroidCompiler  = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerVersion"}
 
 ## Optional - Integration with activities
 activityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
@@ -42,4 +44,5 @@ runtimeRxjava2 = { group = "androidx.compose.runtime", name = "runtime-rxjava2" 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-#daggerHiltPlugin = { id = "com.google.dagger", version.ref = "daggerVersion" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+#daggerHiltPlug = { id = "com.google.dagger.hilt.android", version.ref = "daggerVersion"}
