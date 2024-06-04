@@ -1,13 +1,17 @@
 [versions]
 agp = "8.4.1"
-kotlin = "1.9.0"
+kotlin = "2.0.0"
+kspVersion = "2.0.0-1.0.21"
 coreKtx = "1.13.1"
+# Dagger Hilt
+daggerVersion = "2.51.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.7.0"
 material = "1.12.0"
-
+activity-compose = "1.9.0"
+lifecycle-viewmodel-compose = "2.8.1"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -15,8 +19,31 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "j
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+# MATERIAL3
+material3 = { group = "androidx.compose.material3", name = "material3"}
+composeUI = { group = "androidx.compose.ui", name = "ui" }
+# ANDROID STUDIO PREVIEW SUPPORT
+androidStudioPreviewSupport = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidStudioPreviewSupportDebug = { group = "androidx.compose.ui", name = "ui-tooling" }
+# UI TEST
+composeTestJunit = { group ="androidx.compose.ui" , name = "ui-test-junit4" }
+debugImplementation = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+# Dagger / Hilt
+hiltAndroid  = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerVersion"}
+hiltAndroidCompiler  = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerVersion"}
+
+## Optional - Integration with activities
+activityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+## Optional - Integration with ViewModels
+lifecycleViewmodelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle-viewmodel-compose" }
+## Optional - Integration with LiveData
+runtimeLivedata = { group = "androidx.compose.runtime", name = "runtime-livedata" }
+## Optional - Integration with RxJava
+runtimeRxjava2 = { group = "androidx.compose.runtime", name = "runtime-rxjava2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+daggerHiltPlug = { id = "com.google.dagger.hilt.android", version.ref = "daggerVersion"}
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
