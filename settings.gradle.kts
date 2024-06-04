@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposeMultiModuleApp"
 include(":app")
- 
+include(":core")
+include(":feature")
