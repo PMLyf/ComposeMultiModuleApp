@@ -2,7 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp")
-//    id("com.google.dagger.hilt.android")
+    id("com.google.dagger.hilt.android")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -37,6 +38,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -53,7 +55,7 @@ dependencies {
 
 
 
-
+// COMPOSE
     val composeBom = platform("androidx.compose:compose-bom:2024.05.00")
     implementation(composeBom)
     androidTestImplementation(composeBom)
@@ -68,8 +70,10 @@ dependencies {
     implementation(libs.lifecycleViewmodelCompose)
     implementation(libs.runtimeLivedata)
     implementation(libs.runtimeRxjava2)
-//    ksp("com.google.dagger:hilt-android-compiler:2.44")
-//    implementation("com.google.dagger:hilt-android:2.44")
 
+
+    // HILT
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
 
 }
